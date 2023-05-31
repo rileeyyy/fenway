@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+.rmv {
+    display:none;
+}
+.txt {
+    background-color:#222222;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Arial Black", sans-serif;
+}
+.btminfo {
+    position:fixed;
+    padding: 1px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:#111111;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Arial Black", sans-serif;
+}
+.header {
+    position:fixed;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    background-color:#222222;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Arial Black", sans-serif;
+}
+.oheader {
+    position:fixed;
+    padding: 20px;
+    top: 0;
+    right: 0;
+    background-color:#222222;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Arial Black", sans-serif;
+}
+   body {
+     color:white;
+     background-color:black;
+     font-family: "Arial Black", sans-serif;
+     text-align:center;
+   }
+  </style>
+  <title>Fenway to english</title>
+  <script>
+    function handleInput() {
+      var input = document.getElementById("textbox").value;
+      var output = document.getElementById("textfield");
+      
+      if (input === "eating place") {
+        output.value = "kitchen";
+      } else if (input === "food lady") {
+        output.value = "mom";
+      } else if (input === "fetch man") {
+        output.value = "dad";
+      } else if (input === "short human") {
+        output.value = "hattie";
+      } else if (input === "wicked floor") {
+        output.value = "tile floor";
+      } else if (input === "squirrel house") {
+        output.value = "tree house";
+      } else if (input === "evil humans") {
+        output.value = "movers";
+      } else if (input === "lounging place") {
+        output.value = "living room";
+      } else if (input === "flashing screen") {
+        output.value = "tv";
+      } else if (input === "big gate") {
+        output.value = "cage";
+      } else if (input === "dog park") {
+        output.value = "backyard";
+      } else if (input === "boom kabooms") {
+        output.value = "thunder";
+      } else if (input === "muffin lady") {
+        output.value = "neighbor";
+      } else if (input === "terrifying sound") {
+        output.value = "doorbell";
+      } else if (input === "one human") {
+        output.value = "trainer";
+      } else if (input === "perfectly still dog") {
+        output.value = "planter";
+      } else if (input === "big brown truck") {
+        output.value = "mail truck";
+      } else if (input === "fenway") {
+        fenwayhandler();
+      } else {
+        output.value = "";
+      }
+    }
+    function fenwayhandler() {
+      var img = document.getElementById("fw");
+      img.classList.remove("rmv");
+    }
+  </script>
+</head>
+<body>
+   <div class="header">
+      <h1>Fenway To English</h1>
+   </div>
+   <div class="oheader">
+      <h3>How to use:</h1>
+      <h5>Input the Fenway word in "input" See translation in "output"</h5>
+   </div>
+   <div class="btminfo">
+      <h3>created by riley</h3>
+   </div>
+    <br>
+   <div class="txt">
+    <label for="textbox" >Input:</label>
+    <input type="text" id="textbox" oninput="handleInput()">
+     <br><br>
+    <label for="textfield">Output:</label>
+    <input type="text" id="textfield" disabled>
+    <br>
+    <img src="fenway.png" class="rmv" id="fw">
+   </div>
+</body>
+</html>
